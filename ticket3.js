@@ -1,9 +1,11 @@
 function applyDiscount(subtotal) {
     const discount = 10;
+    const minSpend = 20;
     let total;
 
     if (subtotal > 20) {
-        total = subtotal - (subtotal / discount);
+        let overSpend = subtotal - minSpend;
+        total = subtotal - (overSpend / discount);
         return total;
     } else {
         total = subtotal;
