@@ -1,9 +1,17 @@
-function convertFToC(fTemperature) {
-    let fTemp = - 32 * .5556;
-    return cTemperature + fTemp;
+function displayTemperatureInCelsius(fTemperature) {
+    let cTemperature = (fTemperature - 32) * 5/9;
+    return cTemperature;
 }
 
-function convertCToF(cTemperature) {
-    let cTemp = - 32 / 1.8
-    return fTemperature * cTemp;
+
+function displayTemperatureInFahrenheit(cTemperature) {
+    let fTemperature = cTemperature * 9/5 + 32;
+    return fTemperature;
+}
+
+let lastReturnedCelsius = true; // Default to Celsius
+
+function toggleTemperatureDisplay() {
+    lastReturnedCelsius = !lastReturnedCelsius;
+    return lastReturnedCelsius ? "Celsius" : "Fahrenheit";
 }
